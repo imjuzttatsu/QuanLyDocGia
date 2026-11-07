@@ -7,16 +7,42 @@ namespace QuanLyDocGia.DAL
 {
     public class QuanLyDocGiaDbContext : DbContext
     {
+        private static bool _migrated = false;
+        private static readonly object _lock = new object();
+
         public DbSet<LoaiDocGia> LoaiDocGias { get; set; } = null!;
         public DbSet<DocGia> DocGias { get; set; } = null!;
 
         public QuanLyDocGiaDbContext()
         {
+            EnsureDatabaseMigrated();
         }
 
         public QuanLyDocGiaDbContext(DbContextOptions<QuanLyDocGiaDbContext> options)
             : base(options)
         {
+            EnsureDatabaseMigrated();
+        }
+
+        private void EnsureDatabaseMigrated()
+        {
+            if (!_migrated)
+            {
+                lock (_lock)
+                {
+                    if (!_migrated)
+                    {
+                        try
+                        {
+                            Database.Migrate();
+                        }
+                        catch
+                        {
+                        }
+                        _migrated = true;
+                    }
+                }
+            }
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
