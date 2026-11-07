@@ -84,6 +84,7 @@ namespace QuanLyDocGia.GUI
             cboGioiTinh.SelectedIndex = 0;
             dtpNgaySinh.Value = DateTime.Today;
 
+            dgvDocGia.CurrentCell = null;
             dgvDocGia.ClearSelection();
 
             txtMaDG.ReadOnly = false;

@@ -393,7 +393,7 @@ namespace QuanLyDocGia.GUI
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý độc giả - 24110359 - Nguyễn Đăng Khoa";
+            this.Text = "Quản lý độc giả – 24110359 – Nguyễn Đăng Khoa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grpThongTin.ResumeLayout(false);

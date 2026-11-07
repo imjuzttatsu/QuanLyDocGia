@@ -15,6 +15,6 @@
 
 ## Cài đặt và sử dụng
 1. Mở solution `QuanLyDocGia.sln` bằng Visual Studio 2022 (yêu cầu .NET 8.0 SDK).
-2. Kiểm tra chuỗi kết nối trong `QuanLyDocGia.DAL/QuanLyDocGiaDbContext.cs`.
+2. Kiểm tra chuỗi kết nối trong file `App.config` (cấu hình sẵn kết nối Microsoft SQL Server / LocalDB).
 3. Chạy lệnh cập nhật cơ sở dữ liệu nếu cần: `dotnet ef database update --project QuanLyDocGia.DAL --startup-project QuanLyDocGia.GUI`.
 4. Build và chạy project `QuanLyDocGia.GUI`.

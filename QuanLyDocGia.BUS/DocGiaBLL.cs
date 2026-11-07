@@ -16,9 +16,17 @@ namespace QuanLyDocGia.BUS
 
         public void Add(DocGia docGia)
         {
+            if (docGia == null)
+            {
+                throw new ArgumentNullException(nameof(docGia), "Dữ liệu độc giả không hợp lệ!");
+            }
+
+            docGia.MaDG = docGia.MaDG?.Trim() ?? string.Empty;
+            docGia.HoTen = docGia.HoTen?.Trim() ?? string.Empty;
+
             ValidateDocGia(docGia);
 
-            if (_docGiaRepo.Exists(docGia.MaDG.Trim()))
+            if (_docGiaRepo.Exists(docGia.MaDG))
             {
                 throw new InvalidOperationException("Mã độc giả đã tồn tại!");
             }
@@ -28,9 +36,17 @@ namespace QuanLyDocGia.BUS
 
         public void Update(DocGia docGia)
         {
+            if (docGia == null)
+            {
+                throw new ArgumentNullException(nameof(docGia), "Dữ liệu độc giả không hợp lệ!");
+            }
+
+            docGia.MaDG = docGia.MaDG?.Trim() ?? string.Empty;
+            docGia.HoTen = docGia.HoTen?.Trim() ?? string.Empty;
+
             ValidateDocGia(docGia);
 
-            if (!_docGiaRepo.Exists(docGia.MaDG.Trim()))
+            if (!_docGiaRepo.Exists(docGia.MaDG))
             {
                 throw new InvalidOperationException("Không tìm thấy độc giả để cập nhật!");
             }
@@ -40,12 +56,13 @@ namespace QuanLyDocGia.BUS
 
         public void Delete(string maDG)
         {
-            if (string.IsNullOrWhiteSpace(maDG))
+            string ma = maDG?.Trim() ?? string.Empty;
+            if (string.IsNullOrWhiteSpace(ma))
             {
                 throw new ArgumentException("Chưa chọn độc giả để xóa!");
             }
 
-            _docGiaRepo.Delete(maDG.Trim());
+            _docGiaRepo.Delete(ma);
         }
 
         private void ValidateDocGia(DocGia docGia)

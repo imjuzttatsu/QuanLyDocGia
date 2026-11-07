@@ -6,7 +6,6 @@ namespace QuanLyDocGia.Entity
     public class LoaiDocGia
     {
         [Key]
-        [Required]
         [StringLength(10)]
         public string MaLoai { get; set; } = string.Empty;
 

@@ -21,6 +21,7 @@ namespace QuanLyDocGia.Entity
         [Column(TypeName = "decimal(18,2)")]
         public decimal PhiThuongNien { get; set; }
 
+        [Required]
         [StringLength(10)]
         public string MaLoai { get; set; } = string.Empty;
 

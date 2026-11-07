@@ -61,9 +61,11 @@ namespace QuanLyDocGia.DAL.Migrations
                 columns: new[] { "MaDG", "GioiTinh", "HoTen", "MaLoai", "NgaySinh", "PhiThuongNien" },
                 values: new object[,]
                 {
-                    { "DG001", false, "Nguyễn Minh Anh", "SV", new DateTime(2001, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), 120000m },
-                    { "DG002", true, "Trần Đức Long", "SV", new DateTime(2004, 7, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), 120000m },
-                    { "DG003", false, "Lê Thu Hà", "GV", new DateTime(1985, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), 200000m }
+                    { "DG001", true, "Nguyễn Đăng Khoa", "SV", new DateTime(2005, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), 120000m },
+                    { "DG002", false, "Phan Thu An", "SV", new DateTime(2006, 8, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), 120000m },
+                    { "DG003", true, "Nguyễn Đức Anh", "SV", new DateTime(2006, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 120000m },
+                    { "DG004", false, "Lê Thu Hà", "GV", new DateTime(1985, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), 200000m },
+                    { "DG005", true, "Phạm Quang Huy", "GV", new DateTime(1990, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), 200000m }
                 });
 
             migrationBuilder.CreateIndex(

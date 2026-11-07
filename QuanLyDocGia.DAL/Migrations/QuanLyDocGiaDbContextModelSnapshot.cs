@@ -57,28 +57,46 @@ namespace QuanLyDocGia.DAL.Migrations
                         new
                         {
                             MaDG = "DG001",
-                            GioiTinh = false,
-                            HoTen = "Nguyễn Minh Anh",
+                            GioiTinh = true,
+                            HoTen = "Nguyễn Đăng Khoa",
                             MaLoai = "SV",
-                            NgaySinh = new DateTime(2001, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            NgaySinh = new DateTime(2005, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PhiThuongNien = 120000m
                         },
                         new
                         {
                             MaDG = "DG002",
-                            GioiTinh = true,
-                            HoTen = "Trần Đức Long",
+                            GioiTinh = false,
+                            HoTen = "Phan Thu An",
                             MaLoai = "SV",
-                            NgaySinh = new DateTime(2004, 7, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            NgaySinh = new DateTime(2006, 8, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PhiThuongNien = 120000m
                         },
                         new
                         {
                             MaDG = "DG003",
+                            GioiTinh = true,
+                            HoTen = "Nguyễn Đức Anh",
+                            MaLoai = "SV",
+                            NgaySinh = new DateTime(2006, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PhiThuongNien = 120000m
+                        },
+                        new
+                        {
+                            MaDG = "DG004",
                             GioiTinh = false,
                             HoTen = "Lê Thu Hà",
                             MaLoai = "GV",
                             NgaySinh = new DateTime(1985, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PhiThuongNien = 200000m
+                        },
+                        new
+                        {
+                            MaDG = "DG005",
+                            GioiTinh = true,
+                            HoTen = "Phạm Quang Huy",
+                            MaLoai = "GV",
+                            NgaySinh = new DateTime(1990, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PhiThuongNien = 200000m
                         });
                 });
