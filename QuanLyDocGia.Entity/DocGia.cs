@@ -7,6 +7,7 @@ namespace QuanLyDocGia.Entity
     public class DocGia
     {
         [Key]
+        [Required]
         [StringLength(20)]
         public string MaDG { get; set; } = string.Empty;
 

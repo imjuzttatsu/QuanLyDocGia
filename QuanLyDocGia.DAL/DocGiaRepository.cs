@@ -29,8 +29,16 @@ namespace QuanLyDocGia.DAL
         public void Update(DocGia docGia)
         {
             using var context = new QuanLyDocGiaDbContext();
-            context.DocGias.Update(docGia);
-            context.SaveChanges();
+            var existing = context.DocGias.Find(docGia.MaDG);
+            if (existing != null)
+            {
+                existing.HoTen = docGia.HoTen;
+                existing.GioiTinh = docGia.GioiTinh;
+                existing.NgaySinh = docGia.NgaySinh;
+                existing.PhiThuongNien = docGia.PhiThuongNien;
+                existing.MaLoai = docGia.MaLoai;
+                context.SaveChanges();
+            }
         }
 
         public void Delete(string maDG)
