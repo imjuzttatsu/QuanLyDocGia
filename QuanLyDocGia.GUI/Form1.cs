@@ -144,25 +144,9 @@ namespace QuanLyDocGia.GUI
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtMaDG.Text))
-                {
-                    MessageBox.Show("Mã độc giả không được để trống!", "Lỗi");
-                    txtMaDG.Focus();
-                    return;
-                }
-
-                if (string.IsNullOrWhiteSpace(txtHoTen.Text))
-                {
-                    MessageBox.Show("Họ tên không được để trống!", "Lỗi");
-                    txtHoTen.Focus();
-                    return;
-                }
-
                 if (!decimal.TryParse(txtPhiThuongNien.Text.Trim(), out decimal phi))
                 {
-                    MessageBox.Show("Phí thường niên phải là số!", "Lỗi");
-                    txtPhiThuongNien.Focus();
-                    return;
+                    phi = -1;
                 }
 
                 var dg = LayDuLieuTuForm(phi);
@@ -182,24 +166,9 @@ namespace QuanLyDocGia.GUI
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtMaDG.Text))
-                {
-                    MessageBox.Show("Chưa chọn độc giả để sửa!", "Lỗi");
-                    return;
-                }
-
-                if (string.IsNullOrWhiteSpace(txtHoTen.Text))
-                {
-                    MessageBox.Show("Họ tên không được để trống!", "Lỗi");
-                    txtHoTen.Focus();
-                    return;
-                }
-
                 if (!decimal.TryParse(txtPhiThuongNien.Text.Trim(), out decimal phi))
                 {
-                    MessageBox.Show("Phí thường niên phải là số!", "Lỗi");
-                    txtPhiThuongNien.Focus();
-                    return;
+                    phi = -1;
                 }
 
                 var dg = LayDuLieuTuForm(phi);
